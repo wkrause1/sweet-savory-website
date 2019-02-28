@@ -25,7 +25,7 @@ Develop a simplistic website for Sweet and Savory Donuts and Bagels.
 # Accessing the sight locally
 - Visit http://localhost:8000/ to view site
 - Visit http://localhost:8000/admin/ and login with superuser account
-   created in step 4 to add schedule data
+   created in step 4 to add data
 - `$ docker-compose logs web` to see Django debug logs
 
 # Style
