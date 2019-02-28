@@ -2,13 +2,13 @@
 W.e.b. DuBoiz
 
 # Members
-Will Krause
-Carter Wood
-Hari Talari
+Will Krause,
+Carter Wood,
+Hari Talari,
 Drew Lester
 
 # sweet-savory-website
-A website being developed by Radford University students for the local business in Radford, Sweet and Savory Donuts and Bagels
+A website being developed by Radford University students for the local business in Radford, Sweet and Savory Donuts and Bagels. 
 
 # Requirements
 - Docker and Docker-Compose
