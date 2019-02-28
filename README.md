@@ -1,7 +1,7 @@
-#Team Name
+# Team Name
 W.e.b. DuBoiz
 
-#Members
+# Members
 Will Krause
 Carter Wood
 Hari Talari
