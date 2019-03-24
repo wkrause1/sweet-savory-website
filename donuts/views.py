@@ -14,3 +14,6 @@ def donuts(request):
         'donuts' : donuts
     }
     return render(request, 'donuts/donuts.html', context)
+
+def contact(request):
+    return render(request, 'donuts/contact-us.html')
