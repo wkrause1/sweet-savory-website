@@ -8,12 +8,26 @@ from .models import *
 def index(request):
     return render(request, 'donuts/index.html')
 
-def donuts(request):
-    donuts = Donuts.objects.all()
+def sweet(request):
+    sweets = Donuts.objects.all()
     context = {
-        'donuts' : donuts
+        'donuts' : sweets
     }
     return render(request, 'donuts/donuts.html', context)
+
+def savory(request):
+    savories = Sandwiches.objects.all()
+    context = {
+        'savories' : savories
+    }
+    return render(request, 'donuts/savory.html', context)
+
+def drinks(request):
+    drinks = Drinks.objects.all()
+    context = {
+        'drinks' : drinks
+    }
+    return render(request, 'donuts/drinks.html', context)
 
 def contact(request):
     return render(request, 'donuts/contact-us.html')
