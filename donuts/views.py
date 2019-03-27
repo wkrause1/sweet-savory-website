@@ -13,7 +13,7 @@ def sweet(request):
     context = {
         'donuts' : sweets
     }
-    return render(request, 'donuts/donuts.html', context)
+    return render(request, 'donuts/sweets.html', context)
 
 def savory(request):
     savories = Sandwiches.objects.all()
