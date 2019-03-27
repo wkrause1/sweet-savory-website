@@ -9,21 +9,21 @@ def index(request):
     return render(request, 'donuts/index.html')
 
 def sweet(request):
-    sweets = Donuts.objects.all()
+    sweets = Sweet.objects.all()
     context = {
         'donuts' : sweets
     }
     return render(request, 'donuts/sweets.html', context)
 
 def savory(request):
-    savories = Sandwiches.objects.all()
+    savories = Savory.objects.all()
     context = {
         'savories' : savories
     }
     return render(request, 'donuts/savory.html', context)
 
 def drinks(request):
-    drinks = Drinks.objects.all()
+    drinks = Drink.objects.all()
     context = {
         'drinks' : drinks
     }
