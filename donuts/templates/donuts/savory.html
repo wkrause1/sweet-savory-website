@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Savories</title>
-</head>
-<body>
-{% for s in savories %}
-    {{ s.name }}
-    <br>
-    <img src="{{ s.image }}" height="70" width="90" >
-    <br>
-    {{ s.description }}
-    <br>
-    {{ s.price }}
-{% endfor %}
-</body>
-</html>
+{% extends 'donuts/base.html' %}
+{% block content %}
+    {% for s in savories %}
+        {{ s.name }}
+        <br>
+        <img src="{{ s.image }}" height="70" width="90" >
+        <br>
+        {{ s.description }}
+        <br>
+        {{ s.price }}
+    {% endfor %}
+{% endblock %}
