@@ -22,6 +22,17 @@ def donuts(request):
     return render(request, 'donuts/donuts.html', context)
 
 def email(request):
-    email = EmailMessage('Subject', 'Body', to=['blakeygriffy@gmail.com'])
-    email.send()
-    return render(request, 'donuts/email.html')
+    form_class = ContactForm(request.POST or None)
+
+    if request.method == 'POST':
+        message = request.POST['message']
+        subject = request.POST['subject']
+        email = EmailMessage(subject, message, to=['blakeygriffy@gmail.com'])
+        email.send()
+        #return render(request, 'donuts/contact-us.html')
+
+    form = form_class
+    context = {
+        'form': form
+    }
+    return render(request, 'donuts/contact-us.html', context)
