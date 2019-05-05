@@ -1,22 +1,18 @@
 {% extends 'donuts/base.html' %}
 {% load static %}
 {% block content %}
-<style>
-    .main {
-        font-family: "Gill Sans";
-        font-size: 50px;
-    }
-</style>
 <div align="center" class="main">Sweets</div>
+<div class="product-list">
     {% for d in donuts %}
     <div class="product">
-        <h2 class="product-name" align="center">{{ d.name }} </h2>
-        <br>
-        <img class= "product-image" src="{{ d.image }}" height="200" width="300" >
-        <br>
-        {{ d.description }}
-        <br>
-        {{ d.price }}
-    {% endfor %}
+        <br />
+        <img class= "product-image" src="{{ d.image }}" height="150" width="200" >
+        <br />
+        <div align="center" class="product-name">{{ d.name }} </div>
+        <br />
+        <div align="center" class="product-description"> {{ d.description }} </div>
+        <br />
     </div>
+    {% endfor %}
+</div>
 {% endblock %}

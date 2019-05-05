@@ -6,13 +6,35 @@
     <script></script>
     <style>
         /* Add a black background color to the top navigation */
+        .product-list {
+            display: flex;
+            flex-direction: row;
+            flex-flow: row wrap;
+            padding: 20px;
+            justify-content: space-around;
+
+        }
+        .product-description {
+            font-family: "Gill Sans";
+            align-content: center;
+        }
+        .product-name {
+            font-size: 20px;
+            font-family: "Gill Sans";
+            align-content: center;
+        }
+        .main {
+        font-family: "Gill Sans";
+        font-size: 50px;
+    }
+
         html, body {
             margin: 0;
             padding: 0
         }
         .product {
-	 background: #c9c8cd;
-	 border: solid goldenrod;
+	 background: white;
+	 //border: solid #bd7bb9;
 	 margin: 16px;
 	 width: 200px;
 	 border-radius: 2px;
@@ -23,19 +45,22 @@
 	 max-height: 200px;
 }
  .product .product-image img {
+     display: flex;
+     flex-wrap: wrap;
 	 cursor: zoom-in;
-	 width: 100%;
+	 width: 50%;
 	 height: auto;
-	 transition: transform 300ms ease-in;
-	 transform: scale(1);
+	 //transition: transform 300ms ease-in;
+	 //transform: scale(1);
 }
  @media (min-width: 991px) {
 	 .product .product-image img {
 		 min-height: 200px;
 	}
 }
- .product .product-image img:hover {
+ .product:hover {
 	 transform: scale(1.1);
+     transition: transform .2s
 }
 
 .topnav {
@@ -77,9 +102,12 @@
 .responsive {
   margin-left: 0;
   margin-right: 0;
-  width: 101%;
+  width: 100%;
   height: auto;
     display: block;
+}
+.bottom-border {
+
 }
     </style>
 </head>
@@ -97,5 +125,6 @@
 <div class="tab_content">
     {% block content %} {% endblock %}
 </div>
+<div class="bottom-border"></div>
 </body>
 </html>
