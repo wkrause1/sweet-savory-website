@@ -35,7 +35,7 @@ def drinks(request):
     }
     return render(request, 'donuts/drinks.html', context)
 
-def email(request):
+def contact(request):
     form_class = ContactForm(request.POST or None)
 
     if request.method == 'POST':
@@ -43,7 +43,7 @@ def email(request):
         message = request.POST['message']
         email = EmailMessage(name, message, to=['blakeygriffy@gmail.com'])
         email.send()
-        return HttpResponseRedirect('/donuts/')
+        return HttpResponseRedirect('/')
 
     form = form_class
     context = {
