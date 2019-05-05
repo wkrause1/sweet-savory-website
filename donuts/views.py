@@ -14,12 +14,26 @@ from django.core.mail import EmailMessage
 def index(request):
     return render(request, 'donuts/index.html')
 
-def donuts(request):
-    donuts = Donuts.objects.all()
+def sweet(request):
+    sweets = Sweet.objects.all()
     context = {
-        'donuts' : donuts
+        'donuts' : sweets
     }
-    return render(request, 'donuts/donuts.html', context)
+    return render(request, 'donuts/sweets.html', context)
+
+def savory(request):
+    savories = Savory.objects.all()
+    context = {
+        'savories' : savories
+    }
+    return render(request, 'donuts/savory.html', context)
+
+def drinks(request):
+    drinks = Drink.objects.all()
+    context = {
+        'drinks' : drinks
+    }
+    return render(request, 'donuts/drinks.html', context)
 
 def email(request):
     form_class = ContactForm(request.POST or None)
