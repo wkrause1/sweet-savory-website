@@ -1,10 +1,16 @@
 {% extends 'donuts/base.html' %}
 {% load static %}
 {% block content %}
-<h1>Sweets</h1>
+<style>
+    .main {
+        font-family: "Gill Sans";
+        font-size: 50px;
+    }
+</style>
+<div align="center" class="main">Sweets</div>
     {% for d in donuts %}
     <div class="product">
-        <h2 class="product-name">{{ d.name }}</h2>
+        <h2 class="product-name" align="center">{{ d.name }} </h2>
         <br>
         <img class= "product-image" src="{{ d.image }}" height="200" width="300" >
         <br>
