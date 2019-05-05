@@ -3,14 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script></script>
     <style>
         /* Add a black background color to the top navigation */
+        .product {
+	 background: #c9c8cd;
+	 border: solid goldenrod;
+	 margin: 16px;
+	 width: 200px;
+	 border-radius: 2px;
+}
+ .product .product-image {
+	 overflow: hidden;
+	 border-radius: 2px 2px 0 0;
+	 max-height: 200px;
+}
+ .product .product-image img {
+	 cursor: zoom-in;
+	 width: 100%;
+	 height: auto;
+	 transition: transform 300ms ease-in;
+	 transform: scale(1);
+}
+ @media (min-width: 991px) {
+	 .product .product-image img {
+		 min-height: 200px;
+	}
+}
+ .product .product-image img:hover {
+	 transform: scale(1.1);
+}
+
 .topnav {
   background-color: #333;
   overflow: hidden;
     position: fixed; /* Set the navbar to fixed position */
     width: 100%;
   top: 0;
+    transition: background-color .2s, color .2s;
+    font-family: "Gill Sans";
 }
 
 /* Style the links inside the navigation bar */
@@ -18,7 +49,7 @@
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 28px 30px;
+  padding: 18px 20px;
   text-decoration: none;
   font-size: 30px;
   opacity: 0.8;
@@ -28,12 +59,14 @@
 .topnav a:hover {
   background-color: #ddd;
   color: black;
+    transition: background-color .2s, color .2s;
 }
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: #4CAF50;
+  background-color: #bd7bb9;
   color: white;
+    transition: background-color .2s, color .2s;
 }
 .responsive {
   width: 100%;
@@ -43,14 +76,23 @@
     </style>
 </head>
 <body>
-<div class="topnav">
-  <a class="active" href="/">Home</a>
-  <a href="/sweet">Sweets</a>
-  <a href="/contact-us">Contact</a>
-  <a href="/savory">Savories</a>
-  <a href="/drinks">Drinks</a>
-</div>
-<a href="https://ibb.co/N2JYf0Z"><img src="https://i.ibb.co/chZTRWD/sw.jpg" alt="sw" border="0"class="responsive"></a>
+<script>
+    function setActiveTab(active) {
+        let nolongeractive = document.getElementsByClassName("active");
+        console.log(nolongeractive);
+        nolongeractive[1].setAttribute("class", "");
+        let activeLink = document.getElementById(active);
+        activeLink.setAttribute("class", "active");
+    }
+</script>
+<ul class="topnav">
+    <a href="/" class="active" id="home" onclick="setActiveTab('home')">HOME</a></li>
+    <a href="/sweet" id="sweets" onclick="setActiveTab('sweets')">Sweets</a> </li>
+    <a href="/savory" id="savories" onclick="setActiveTab('savories')">Savories</a> </li>
+    <a href="/drinks" id="drinks" onclick="setActiveTab('drinks')">Drinks</a> </li>
+    <a href="/contact-us" id="contact" onclick="setActiveTab('contact')">Contact</a> </li>
+</ul>
+<img src="https://i.ibb.co/chZTRWD/sw.jpg" alt="sw" border="0"class="responsive"></a>
 
 
 <div class="tab_content">

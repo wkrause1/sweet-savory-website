@@ -1,12 +1,13 @@
 {% extends 'donuts/base.html' %}
 {% block content %}
+<h1>Drinks:</h1>
     {% for d in drinks %}
         {{ d.name }}
         <br>
-        <img src="{{ d.image }}" height="70" width="90" >
+        <img src="{{ d.image }}" height="200" width="200" >
         <br>
         {{ d.description }}
         <br>
-        {{ d.price }}
+        ${{ d.price }}
     {% endfor %}
 {% endblock %}
