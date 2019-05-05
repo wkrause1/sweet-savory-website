@@ -66,7 +66,7 @@
 .topnav a.active {
   background-color: #bd7bb9;
   color: white;
-    transition: background-color .2s, color .2s;
+    /*transition: background-color .2s, color .2s;*/
 }
 .responsive {
   width: 100%;
@@ -78,19 +78,17 @@
 <body>
 <script>
     function setActiveTab(active) {
-        let nolongeractive = document.getElementsByClassName("active");
-        console.log(nolongeractive);
-        nolongeractive[1].setAttribute("class", "");
-        let activeLink = document.getElementById(active);
-        activeLink.setAttribute("class", "active");
+        console.log("here");
+        document.getElementById("sweets").className = "active";
+
     }
 </script>
 <ul class="topnav">
-    <a href="/" class="active" id="home" onclick="setActiveTab('home')">HOME</a></li>
-    <a href="/sweet" id="sweets" onclick="setActiveTab('sweets')">Sweets</a> </li>
-    <a href="/savory" id="savories" onclick="setActiveTab('savories')">Savories</a> </li>
-    <a href="/drinks" id="drinks" onclick="setActiveTab('drinks')">Drinks</a> </li>
-    <a href="/contact-us" id="contact" onclick="setActiveTab('contact')">Contact</a> </li>
+    <a href="/" class="{% ifequal request.path '/'%} active {% endifequal%}" id="home" >HOME</a></li>
+    <a href="/sweet" class="{% ifequal request.path '/sweet/'%} active {% endifequal%}" id="sweets" >Sweets</a> </li>
+    <a href="/savory" class="{% ifequal request.path '/savory/'%} active {% endifequal%}" id="savories" >Savories</a> </li>
+    <a href="/drinks" class="{% ifequal request.path '/drinks/'%} active {% endifequal%}" id="drinks" >Drinks</a> </li>
+    <a href="/contact-us" class="{% ifequal request.path '/contact-us/'%} active {% endifequal%}" id="contact" >Contact</a> </li>
 </ul>
 <img src="https://i.ibb.co/chZTRWD/sw.jpg" alt="sw" border="0"class="responsive"></a>
 
