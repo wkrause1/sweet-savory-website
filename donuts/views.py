@@ -25,11 +25,11 @@ def email(request):
     form_class = ContactForm(request.POST or None)
 
     if request.method == 'POST':
+        name = request.POST['name']
         message = request.POST['message']
-        subject = request.POST['subject']
-        email = EmailMessage(subject, message, to=['blakeygriffy@gmail.com'])
+        email = EmailMessage(name, message, to=['blakeygriffy@gmail.com'])
         email.send()
-        #return render(request, 'donuts/contact-us.html')
+        return HttpResponseRedirect('/donuts/')
 
     form = form_class
     context = {
