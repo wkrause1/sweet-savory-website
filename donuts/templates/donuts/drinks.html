@@ -1,13 +1,17 @@
 {% extends 'donuts/base.html' %}
 {% block content %}
-<h1>Drinks:</h1>
-    {% for d in drinks %}
-        {{ d.name }}
-        <br>
-        <img src="{{ d.image }}" height="200" width="200" >
-        <br>
-        {{ d.description }}
-        <br>
-        ${{ d.price }}
+<div align="center" class="main">Drinks</div>
+<div class="product-list">
+    {% for d in donuts %}
+    <div class="product">
+        <br />
+        <img class= "product-image" src="{{ d.image }}" height="150" width="200" >
+        <br />
+        <div align="center" class="product-name">{{ d.name }} </div>
+        <br />
+        <div align="center" class="product-description"> {{ d.description }} </div>
+        <br />
+    </div>
     {% endfor %}
+</div>
 {% endblock %}

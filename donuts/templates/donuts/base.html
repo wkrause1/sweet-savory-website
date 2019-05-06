@@ -11,8 +11,9 @@
             display: flex;
             flex-direction: row;
             flex-flow: row wrap;
-            padding: 20px;
-            justify-content: space-around;
+            padding: 50px;
+            justify-content: space-evenly;
+            align-items: stretch;
 
         }
         .product-description {
@@ -40,17 +41,28 @@
 	 width: 200px;
 	 border-radius: 2px;
 }
- .product .product-image {
-	 overflow: hidden;
+ .product {
 	 border-radius: 2px 2px 0 0;
 	 max-height: 200px;
+     -webkit-transition-duration: .2s;
+     transition-duration: .2s;
 }
+
+ .product-image {
+     overflow: hidden;
+	 max-height: 200px;
+     -webkit-transition-duration: .2s;
+     transition-duration: .2s;
+ }
  .product .product-image img {
      display: flex;
      flex-wrap: wrap;
+     flex-basis: content;
 	 cursor: zoom-in;
 	 width: 50%;
 	 height: auto;
+      -webkit-transition-duration: .2s;
+     transition-duration: .2s;
 }
  @media (min-width: 991px) {
 	 .product .product-image img {
@@ -72,6 +84,8 @@
   top: 0;
     transition: background-color .2s, color .2s;
     font-family: "Gill Sans";
+        transition-duration: .2s;
+
 }
 
 /* Style the links inside the navigation bar */
@@ -83,13 +97,15 @@
   text-decoration: none;
   font-size: 30px;
   opacity: 0.8;
+    transition-duration: .2s;
+
 }
 
 /* Change the color of links on hover */
 .topnav a:hover {
   background-color: #ddd;
   color: black;
-    transition: background-color .2s, color .2s;
+    transition: background-color .2s
 }
 
 /* Add a color to the active/current link */
