@@ -2,14 +2,14 @@
 {% block content %}
 <div align="center" class="main">Savories</div>
 <div class="product-list">
-    {% for d in donuts %}
+    {% for s in savories %}
     <div class="product">
         <br />
-        <img class= "product-image" src="{{ d.image }}" height="150" width="200" >
+        <img class= "product-image" src="{{ s.image }}" height="150" width="200" >
         <br />
-        <div align="center" class="product-name">{{ d.name }} </div>
+        <div align="center" class="product-name">{{ s.name }} </div>
         <br />
-        <div align="center" class="product-description"> {{ d.description }} </div>
+        <div align="center" class="product-description"> {{ s.description }} </div>
         <br />
     </div>
     {% endfor %}
