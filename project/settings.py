@@ -37,7 +37,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['192.168.99.100',
                  'localhost',
-                 'sweet-savory.herokuapp.com']
+                 'sweet-savory.herokuapp.com',
+                 'sweet-savory-test.herokuapp.com',]
 
 
 # Application definition
