@@ -10,9 +10,13 @@ from .forms import ContactForm
 from django.core.mail import EmailMessage
 
 
-
 def index(request):
-    return render(request, 'donuts/index.html')
+    about_us = Home.objects.all()
+    context = {
+        'about_us': about_us
+    }
+    return render(request, 'donuts/index.html', context)
+
 
 def sweet(request):
     sweets = Sweet.objects.filter(offered=True)
@@ -21,6 +25,7 @@ def sweet(request):
     }
     return render(request, 'donuts/sweets.html', context)
 
+
 def savory(request):
     savories = Savory.objects.filter(offered=True)
     context = {
@@ -28,12 +33,14 @@ def savory(request):
     }
     return render(request, 'donuts/savory.html', context)
 
+
 def drinks(request):
     drinks = Drink.objects.filter(offered=True)
     context = {
         'drinks' : drinks
     }
     return render(request, 'donuts/drinks.html', context)
+
 
 def contact(request):
     form_class = ContactForm(request.POST or None)

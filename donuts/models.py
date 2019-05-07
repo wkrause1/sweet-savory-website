@@ -36,3 +36,13 @@ class Drink(models.Model):
         return self.name
 
 
+class Home(models.Model):
+    about_us = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return self.about_us
+
+    class Meta:
+        verbose_name = "Home Page Text"
+        verbose_name_plural = "Home Page Text"
+

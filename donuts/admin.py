@@ -5,3 +5,4 @@ from .models import *
 admin.site.register(Sweet)
 admin.site.register(Savory)
 admin.site.register(Drink)
+admin.site.register(Home)
