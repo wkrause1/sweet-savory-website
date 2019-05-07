@@ -5,6 +5,7 @@ class Sweet(models.Model):
     description = models.CharField(max_length=500)
     price = models.FloatField(default=1.49)
     image = models.URLField()
+    offered = models.BooleanField(default=True)
 
     def __str__(self):
         return self.name
@@ -15,6 +16,7 @@ class Savory(models.Model):
     description = models.CharField(max_length=500)
     price = models.FloatField(default=0.00)
     image = models.URLField()
+    offered = models.BooleanField(default=True)
 
     def __str__(self):
         return self.name
@@ -28,6 +30,7 @@ class Drink(models.Model):
     description = models.CharField(max_length=500)
     price = models.FloatField(default=0.00)
     image = models.URLField()
+    offered = models.BooleanField(default=True)
 
     def __str__(self):
         return self.name
