@@ -5,7 +5,6 @@
     <title>Title</title>
     <script></script>
     <style>
-        /* Add a black background color to the top navigation */
 
         .product-list {
             display: flex;
@@ -17,26 +16,26 @@
 
         }
         .product-description {
-            font-family: "Gill Sans";
             align-content: center;
         }
         .product-name {
             font-size: 20px;
-            font-family: "Gill Sans";
             align-content: center;
         }
         .main {
-        font-family: "Gill Sans";
         font-size: 50px;
     }
 
-        html, body {
+        html, body, * {
             margin: 0;
             padding: 0
         }
+      html * {
+        font-family: "Gill Sans MT" !important;
+      }
+
         .product {
 	 background: white;
-	 //border: solid #bd7bb9;
 	 margin: 16px;
 	 width: 200px;
 	 border-radius: 2px;
@@ -85,7 +84,6 @@
     width: 100%;
   top: 0;
     transition: background-color .2s, color .2s;
-    font-family: "Gill Sans";
         transition-duration: .2s;
 
 }
@@ -127,6 +125,55 @@
 }
 .bottom-border {
 
+}
+
+.subject {
+    margin-left: 15%;
+    font-size: 65px;
+}
+.name {
+    margin-left: 25%;
+    font-size: 35px;
+    width: 20px;
+
+}
+.message {
+    margin-left: 25%;
+    font-size: 35px;
+    width: 20px;
+
+}
+.nameBox {
+    font-size: 28px;
+    width: 331px;
+}
+#id_message {
+    font-size: 16px;
+    resize: none;
+    vertical-align: top;
+}
+.submit{
+  background-color: #333;
+  font-size: 16px;
+  border: none;
+  color: white;
+  padding: 8px 22px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left: 50.7%;
+}
+label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: right;
+}
+input, textarea {
+  display: inline-block;
+  float: left;
+  margin-left: 110px;
 }
     </style>
 </head>
