@@ -12,13 +12,14 @@
             flex-flow: row wrap;
             padding: 50px;
             justify-content: space-evenly;
-            align-items: stretch;
 
         }
         .product-description {
             align-content: center;
+
         }
         .product-name {
+            display: inline-block;
             font-size: 20px;
             align-content: center;
         }
@@ -47,18 +48,15 @@
      transition-duration: .2s;
 }
 
+
  .product-image {
-     overflow: hidden;
 	 max-height: 200px;
      -webkit-transition-duration: .2s;
      transition-duration: .2s;
      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
  }
- .product .product-image img {
-     display: flex;
-     flex-wrap: wrap;
-     flex-basis: content;
+.product-image img {
 	 cursor: zoom-in;
 	 width: 50%;
 	 height: auto;
